@@ -4,3 +4,4 @@ registry: localhost/dev
 imageTag: local                 # 로컬은 tag(+pullPolicy=Never). 공유환경은 digest.
 host: hello.local
 ingressClass: kong
+dbHost: postgres.bee-substrate.svc.cluster.local   # 데모 — 실환경 RDS+ESO(D13)
