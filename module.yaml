@@ -8,6 +8,9 @@ spec:
   image:
     name: hello                 # repo = <values registry>/hello
   dependsOn: []
+  uses:                           # 리소스 = 논리 참조(G37) → platform `resources` 프로파일을 chart 가 룩업·렌더.
+    compute: small                #   → container.resources(요청/제한). 구체값은 platform/values(규칙 3·4).
+    storage: { profile: persistent, mount: /data }   # → PVC + mount(/data 는 app 지식). class·size 는 platform.
   routing:
     - { path: /hello/v1, port: 8080, rateLimit: { minute: 60 } }   # rateLimit → KongPlugin 파생
   events:
