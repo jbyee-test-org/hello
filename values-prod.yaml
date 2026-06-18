@@ -1,0 +1,8 @@
+# 같은 모듈, prod 좌표. registry/host 만 다르다 — 그게 수직분할의 전부 (규칙 3). G51 — env 사다리 dev→prod.
+# 승격(promote)은 dev 의 검증된 핀(imageDigest·chart)을 그대로 나르고, *이 파일의 좌표만* 갈아끼운다.
+env: prod
+registry: ghcr.io/jbyee-test-org/bitcert   # 데모 미러(G10) — 실: ghcr.io/betweenbits-org/bitcert
+imageDigest: ""                 # promote 가 dev provenance 의 digest 를 --set 으로 주입(같은 아티팩트).
+host: hello.bitcert.test        # ← dev 와 다른 유일한 본질(prod 도메인). 나머지는 동일.
+ingressClass: kong
+dbHost: postgres.bee-substrate.svc.cluster.local   # 데모 — 실환경 prod RDS+ESO(D13)
