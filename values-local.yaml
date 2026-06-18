@@ -1,6 +1,5 @@
 # 좌표 + env 차이 (수직분할, 규칙 3). "local 에 어떻게 뜨나"의 데이터.
 env: local
-registry: localhost/dev
 imageTag: local                 # 로컬은 tag(+pullPolicy=Never). 공유환경은 digest.
 host: hello.local
 ingressClass: kong

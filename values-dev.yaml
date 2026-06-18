@@ -1,6 +1,5 @@
 # 같은 모듈, dev 좌표. registry/host 만 다르다 — 그게 수직분할의 전부 (규칙 3).
 env: dev
-registry: ghcr.io/jbyee-test-org/bitcert   # 데모 미러(G10) — 실: ghcr.io/betweenbits-org/bitcert
 imageDigest: ""                 # CI 가 publish 시 --set imageDigest=sha256:... 주입.
                                 # floating tag 차단은 CI lint 몫(규칙 2) — Phase 2.
 host: hello.dev.bitcert.test
